@@ -1,6 +1,10 @@
 /**
  * @author Bin.zeng
  * create by 2023/10/08
+ *
+ * 参考：
+ * https://github.com/primus/eventemitter3
+ * https://github.com/mqyqingfeng/EventEmitter
  * */
 
 /**
@@ -12,6 +16,12 @@ function isValidListener(listener) {
 
 /**
  * 为指定事件添加侦听器
+ * @param  {EventEmitter} emitter 事件发射器实例
+ * @param  {String}       event 事件名
+ * @param  {Function}     fn 侦听函数
+ * @param  {*}            context 执行侦听函数的上下文
+ * @param  {Boolean}      once 指定监听器是否为一次性监听器
+ * @return {EventEmitter} emitter
  * */
 function addListener(emitter, event, fn, context, once) {
   if (!isValidListener(fn))
@@ -85,12 +95,16 @@ class EventEmitter {
         args[j - 1] = arguments[j]
       }
 
-      listeners.forEach(listener => {
-        if (listener.once)
-          this.off(event, listener)
+      for (let i = 0; i < listeners.length; i++) {
+        let listener = listeners[i]
+
+        if (listener.once) {
+          this.off(event, listener.fn)
+          i--
+        }
 
         listener.fn.apply(listener.context, args)
-      })
+      }
     }
 
     return this
@@ -110,6 +124,7 @@ class EventEmitter {
       for (let l = listeners.length - 1; l >= 0; l--) {
         if (listeners[l].fn === listener) {
           listeners.splice(l, 1)
+          break
         }
       }
     }
