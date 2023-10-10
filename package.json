@@ -1,5 +1,5 @@
 {
-  "name": "@cengbin/eventemitter",
+  "name": "@zengbin/eventemitter",
   "version": "1.0.0",
   "description": "EventEmitter 事件发射器",
   "main": "EventEmitter.js",
