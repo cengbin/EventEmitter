@@ -65,7 +65,7 @@ class EventEmitter {
    * 侦听事件
    * @param  {String} event 事件名称
    * @param  {Function} listener 侦听器函数
-   * @param  {*} context 调用侦听器的上下文对象
+   * @param  {*} [context] 调用侦听器的上下文对象
    * @return {EventEmitter} `this`
    * */
   on(event, listener, context) {
@@ -82,7 +82,7 @@ class EventEmitter {
   /**
    * 派发事件
    * @param  {String} event 事件名称
-   * @param  {*} arguments 传入侦听器函数的参数
+   * @param  {*} [arguments] 传入侦听器函数的参数
    * @return {EventEmitter} `this`
    * */
   emit(event) {
@@ -112,6 +112,8 @@ class EventEmitter {
 
   /**
    * 移除事件
+   * @param {String} event 事件名
+   * @param {Function} [listener] 侦听器函数
    * */
   off(event, listener) {
     const listeners = this._events[event]
