@@ -67,6 +67,10 @@ class EventEmitter {
    * @param  {Function} listener 侦听器函数
    * @param  {*} [context] 调用侦听器的上下文对象
    * @return {EventEmitter} `this`
+   * @example
+   *
+   * emitter.subscribe('request_before', func)
+   *
    * */
   on(event, listener, context) {
     return addListener(this, event, listener, context || this, false)
