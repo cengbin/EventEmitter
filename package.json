@@ -1,11 +1,15 @@
 {
-  "name": "eventemitter",
+  "name": "@cengbin/eventemitter",
   "version": "1.0.0",
   "description": "EventEmitter 事件发射器",
   "main": "EventEmitter.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "bin.ceng",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cengbin/EventEmitter.git"
+  },
+  "author": "",
   "license": "ISC"
 }
