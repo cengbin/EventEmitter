@@ -1,7 +1,7 @@
 /**
  * @author Bin.zeng
- * create by 2023/10/08
- *
+ * @date 2023-10-08 00:10:11
+ * @email 596659597@qq.com
  * 参考：
  * https://github.com/primus/eventemitter3
  * https://github.com/mqyqingfeng/EventEmitter
