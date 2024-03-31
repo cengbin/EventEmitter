@@ -31,7 +31,7 @@ import EventEmitter from '@zengbin/eventemitter'
 实现发布/订阅模式
 
 ```
-import EventEmitter from './EventEmitter.js'
+import EventEmitter from '@zengbin/eventemitter'
 
 // 创建事件调度中心
 let eventChannel = new EventEmitter()
