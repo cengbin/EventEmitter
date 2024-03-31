@@ -5,6 +5,7 @@
  * 参考：
  * https://github.com/primus/eventemitter3
  * https://github.com/mqyqingfeng/EventEmitter
+ * https://www.runoob.com/nodejs/nodejs-event.html
  * */
 
 /**

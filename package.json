@@ -1,15 +1,28 @@
 {
   "name": "@zengbin/eventemitter",
   "version": "1.0.0",
-  "description": "EventEmitter 事件发射器",
-  "main": "EventEmitter.js",
+  "description": "EventEmitter 是对事件触发与事件监听器功能的封装",
+  "keywords": "event, 事件",
+  "main": "dist/EventEmitter.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup --config"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/cengbin/EventEmitter.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/eslint-parser": "^7.22.15",
+    "@babel/preset-env": "^7.23.2",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-terser": "^0.4.4",
+    "jest": "^29.7.0",
+    "rollup": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=16.13.1"
+  }
 }
