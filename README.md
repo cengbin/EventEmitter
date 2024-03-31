@@ -2,17 +2,21 @@
 
 ## 简介
 
-一个EventEmitter事件发射器。
+EventEmitter 的核心就是事件触发与事件监听器功能的封装。
 
 全局创建 EventEmitter 实例，用作事件调度中心，可实现发布/订阅模式。
+
+继承 EventEmitter 类，可实现观察者模式。
 
 ## 使用
 
 ```
-import EventEmitter from './EventEmitter.js'
+import EventEmitter from '@zengbin/eventemitter'
 ```
 
 ## API
+
+### EventEmitter 类
 
 |方法|描述|
 |---|---|
@@ -20,6 +24,7 @@ import EventEmitter from './EventEmitter.js'
 |subscribeOnce / once|侦听事件，该事件只能被执行一次|
 |unsubscribe / off|移除事件|
 |publish / emit|派发事件|
+|listeners|返回指定事件的监听器数组|
 
 ## 示例代码
 

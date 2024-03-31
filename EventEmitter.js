@@ -137,6 +137,15 @@ class EventEmitter {
 
     return this
   }
+
+  /**
+   * 返回指定事件的监听器数组
+   * @param {String} event 事件名
+   * @return {Array} 监听器数组
+   * */
+  listeners(event) {
+    return event ? this._events[event] : null;
+  }
 }
 
 export default EventEmitter
