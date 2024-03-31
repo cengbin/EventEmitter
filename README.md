@@ -10,9 +10,15 @@ EventEmitter 的核心就是事件触发与事件监听器功能的封装。
 
 ## 使用
 
-```
-import EventEmitter from '@zengbin/eventemitter'
-```
+**NPM**
+
+`npm install @zengbin/eventemitter --save`
+
+`import EventEmitter from '@zengbin/eventemitter'`
+
+**CDN**
+
+`<script src='dist/EventEmitter.min.js'></script>`
 
 ## API
 
